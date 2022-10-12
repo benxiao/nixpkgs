@@ -5738,6 +5738,7 @@ in {
     python3Packages = self;
   });
 
+  mtcnn = callPackage ../development/python-modules/mtcnn {};
   mergedb = callPackage ../development/python-modules/mergedb { };
 
   mergedeep = callPackage ../development/python-modules/mergedeep { };
