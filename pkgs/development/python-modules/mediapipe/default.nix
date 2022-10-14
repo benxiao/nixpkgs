@@ -7,7 +7,22 @@
 , zip
 , patchelf
 , stdenv
+, gtk2
 }:
+let python =
+    let
+    packageOverrides = self:
+    super: {
+      opencv4 = super.opencv4.override {
+        enableGtk2 = true;
+        gtk2 = gtk2;
+        enableFfmpeg = true; #here is how to add ffmpeg and other compilation flags
+        };
+    };
+    in
+      python3.override {inherit packageOverrides; self = python;};
+
+in
 
 buildPythonPackage rec {
   pname = "mediapipe";
@@ -37,7 +52,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ ];
 
-  propagatedBuildInputs = with python3.pkgs;[
+  propagatedBuildInputs = with python.pkgs;[
     opencv4
     numpy
     protobuf
