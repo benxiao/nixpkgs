@@ -30,7 +30,7 @@ buildPythonPackage rec {
     homepage = "https://github.com/fastai/nbdev";
     description = "Simple and flexible progress bar for Jupyter Notebook and console";
     license = licenses.asl20;
-    maintainers = with maintainers; [ ris ];
+    maintainers = with maintainers; [ rxiao ];
   };
 
 }
