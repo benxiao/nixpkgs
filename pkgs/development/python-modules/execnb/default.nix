@@ -17,7 +17,7 @@ buildPythonPackage rec {
     sha256 = "sha256-y9gSvzJA8Fsh56HbA8SszlozsBBfTLfgWGDXm9uSBvA=";
   };
 
-  propagatedBuildInputs = [ fastcore traitlets ipython];
+  propagatedBuildInputs = [ fastcore traitlets ipython ];
 
   # no real tests
   doCheck = false;

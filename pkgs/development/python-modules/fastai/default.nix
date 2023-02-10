@@ -25,8 +25,18 @@ buildPythonPackage rec {
     sha256 = "sha256-zO9qGFrjpjfvybzZ/qjki3X0VNDrrTtt9CbyL64gA50=";
   };
 
-  propagatedBuildInputs = [ fastprogress fastcore fastdownload 
-  torchvision-bin matplotlib pillow scikit-learn scipy spacy pandas requests
+  propagatedBuildInputs = [
+    fastprogress
+    fastcore
+    fastdownload
+    torchvision-bin
+    matplotlib
+    pillow
+    scikit-learn
+    scipy
+    spacy
+    pandas
+    requests
   ];
 
   # no real tests

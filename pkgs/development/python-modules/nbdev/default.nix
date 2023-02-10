@@ -21,7 +21,7 @@ buildPythonPackage rec {
     sha256 = "sha256-ITMCmuAb1lXONbP5MREpk8vfNSztoTEmT87W1o+fbIU=";
   };
 
-  propagatedBuildInputs = [ fastprogress fastcore asttokens astunparse watchdog execnb ghapi];
+  propagatedBuildInputs = [ fastprogress fastcore asttokens astunparse watchdog execnb ghapi ];
   # no real tests
   doCheck = false;
   pythonImportsCheck = [ "nbdev" ];
