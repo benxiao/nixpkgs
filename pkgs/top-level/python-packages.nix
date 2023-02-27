@@ -5983,6 +5983,9 @@ self: super: with self; {
     enablePython = true;
   });
 
+  
+  mmcv = callPackage ../development/python-modules/mmcv { };
+
   mmh3 = callPackage ../development/python-modules/mmh3 { };
 
   mmpython = callPackage ../development/python-modules/mmpython { };
